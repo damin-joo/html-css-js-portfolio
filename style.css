@@ -148,8 +148,8 @@ a:hover {
 /* SECTIONS */
 
 section {
-    padding-top: 4vh;
-    height: 96vh;
+    padding-top: 10vh;
+    height: 100vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -157,6 +157,42 @@ section {
 
 .section-container {
     display: flex;
+}
+
+/* 0: TYPING SECTION */
+
+.wrap {
+    color: white;
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.lg-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+/* BLINKER */
+
+#dynamic {
+    position: relative;
+    display: inline-block;
+}
+
+#dynamic::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background-color: white;
+}
+
+#dynamic.active::after {
+    display: none;
 }
 
 /* SECTION1: PROFILE SECTION */
@@ -306,6 +342,33 @@ section {
     height: 400px;
     width: 400px;
     margin: auto 0;
+}
+
+.pixel-container {
+    position: relative;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+.pixel-container img, .pixel-container canvas {
+    border-radius: 1rem;
+    justify-content: center;
+    width: 500px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#about .title {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tmu-building {
+    padding: 2rem;
+    margin: 2rem;
 }
 
 /* SECTION3: EXPERIENCE SECTION */
